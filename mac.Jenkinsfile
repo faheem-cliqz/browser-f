@@ -40,7 +40,7 @@ withEnv([
                     security import $CERT_FILE -P $CERT_PASS -k cliqz -A
                 '''
 
-                withEnv(["CQZ_CERT_NAME=$CQZ_CERT_NAME"]) {
+                withEnv(["MAC_CERT_NAME=$CQZ_CERT_NAME"]) {
                     sh './sign_mac.sh'
                 }
             } finally {
